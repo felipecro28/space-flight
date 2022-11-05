@@ -1,0 +1,109 @@
+.contentHeader {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.headerMainDiv {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 100vw;
+    background-color:  #fbfbfb;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 30px;
+
+}
+
+.searchInputDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 35px;
+    width: 25%;
+    min-width: 100px;
+    justify-content: flex-end;
+    align-items: center;
+    border: 2px solid #c1c1c19a;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.searchInput{
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    background-color:  #fbfbfb;
+    outline: none;
+    margin-right: 20px;
+}
+
+::placeholder {
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1.2px;
+}
+
+.contentSearchIcon {
+    display: flex;
+    height: 80%;
+    width: 22px;
+    background-color: #202020d1;
+    margin-right: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    color: white;
+}
+
+.selectComponent{
+    width: 120px;
+    height: 40px;
+    border: 2px solid #c1c1c19a;
+    background-color:  #fbfbfb;
+    border-radius: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 5px;
+    color: red;
+}
+
+
+.contentIcon {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #c1c1c19a;
+    border-radius: 55%;
+    align-items: center;
+    justify-content: center;
+}
+
+.rocketIcon {
+    width: 70%;
+    height: 60%;
+    color: #1e2022ce;
+}
+
+.borderDiv {
+    width: 95vw;
+    border-bottom: 2px solid #929292b5;
+    align-self: center;
+}
+
+.headerMainDiv h2 {
+    font-weight: 400;
+    color: #1e2022ce;
+    font-size: 14;
+    letter-spacing: 1.1px;
+}
