@@ -1,16 +1,32 @@
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Header.module.css";
 import { IoIosRocket, IoIosSearch } from "react-icons/io";
 import { HiSelector } from "react-icons/hi";
 import { MenuItem, TextField } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { IArticle } from "../services/api";
 
-const Header: React.FC = () => {
+interface IProps {
+  filterSearch: (search: string) => void;
+  dateSearch: (dateValue: string) => void;
+}
+
+const Header: React.FC<IProps> = (props: IProps) => {
   const [date, setDate] = useState<string>("Sort");
+  const [search, setSearch] = useState<string>("");
+
+  const {filterSearch, dateSearch} = props;
+
+  useEffect(() => {
+    dateSearch(date)
+  }, [date])
 
   const handleChange = (event: SelectChangeEvent) => {
     setDate(event.target.value);
-    console.log(date);
+  };
+
+  const sendFilterInfo = () => {
+    filterSearch(search)
   };
   return (
     <div className={styles.contentHeader}>
@@ -29,9 +45,10 @@ const Header: React.FC = () => {
             }}
             InputProps={{
               startAdornment: (
-                <IoIosSearch className={styles.contentSearchIcon}></IoIosSearch>
+                <IoIosSearch onClick={sendFilterInfo} className={styles.contentSearchIcon}></IoIosSearch>
               ),
             }}
+            onChange={(e) => setSearch(e.target.value)}
           />
           <Select
             sx={{
