@@ -22,3 +22,10 @@ export const listArticles = (limit: number) => {
   });
   return request.get<IArticle[]>(`/v3/articles?_limit=${limit}`);
 };
+
+export const listSingleArticle = (id: number) => {
+  const request = axios.create({
+    baseURL: BASE_URL,
+  })
+  return request.get<IArticle>(`/v3/article/${id}`)
+}
