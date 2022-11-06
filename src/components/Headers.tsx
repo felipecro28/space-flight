@@ -4,7 +4,6 @@ import { HiSelector } from "react-icons/hi";
 import { MenuItem, TextField } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useEffect, useState } from "react";
-import { IArticle } from "../services/api";
 
 interface IProps {
   filterSearch: (search: string) => void;
