@@ -1,0 +1,101 @@
+.modal {
+    display: flex;
+    z-index: 1;
+    width: 50%;
+    height: 380px;
+    background-color: rgb(246, 246, 246);
+    border: 2px solid #a8a8a8e8;
+    padding: 20px;
+    right: 25%;
+    position: fixed;
+
+}
+
+.cardImage,
+.cardText {
+    display: flex;
+    width: 40%;
+}
+
+.cardImage img {
+    width: 80%;
+    height: 70%;
+    margin-top: 40px;
+}
+
+.cardText {
+    width: 60%;
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+.cardText * {
+    margin-bottom: 5px;
+}
+
+.cardText h3 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.dateText {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navSite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    font-weight: lighter;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+}
+
+.textParagraph {
+    overflow: hidden;
+}
+
+.navSite button {
+    width: 120px;
+    height: 40px;
+    background-color: #767676;
+    font-size: 16px;
+    font-weight: lighter;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.navSite a {
+    color: white;
+}
+
+
+@media (max-width: 700px) {
+
+    .modal {
+        width: 100%;
+        height: 400px;
+        right: 0;
+        
+    }
+
+    .cardImage {
+        width: 60%;
+    }
+
+    .cardText {
+        width: 70%;
+    }
+
+    .cardText p {
+        font-size: 12px;
+    }
+}
